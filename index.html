@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>anyi今天吃什么</title>
+    <title>爷今天吃什么</title>
 
     <meta name="description" content="别再问爷下顿吃什么了！！">
     <meta name="keywords" content="">
@@ -535,11 +535,11 @@
                             var num_a = game.prizes[game.step].num_a_time;
                             var b = (num_a + found) > all ? all : (num_a + found);
 
-                            var str = game.prizes[game.step].name + '(' + game.prizes[game.step].num + '顿';
-                            if (num_a != all) {
-                                str += ', ' + (found + 1) + '-' + b;
-                            }
-                            str += ')';
+                            var str = game.prizes[game.step].name;// + '(' + game.prizes[game.step].num + '顿';
+                            //if (num_a != all) {
+                              //  str += ', ' + (found + 1) + '-' + b;
+                           // }
+                            //str += ')';
                         }
                         if (str == '') {
                             $('#current_step').hide('fast');
