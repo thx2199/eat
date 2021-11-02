@@ -12,6 +12,12 @@
     <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.7.2.custom.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+           <script type="text/javascript"> 
+                function btnAction123() {
+                    alert("函数已经调用");
+                    game.process();
+                }
+           </script>
 
     <style type="text/css">
         table {
@@ -131,13 +137,38 @@
             color: #fff;
         }
     </style>
+
+
+     <style type="text/css">
+.login-button { /* 按钮美化 */
+	width: 270px; /* 宽度 */
+	height: 40px; /* 高度 */
+	border-width: 0px; /* 边框宽度 */
+	border-radius: 3px; /* 边框半径 */
+	background: #1E90FF; /* 背景颜色 */
+	cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+	outline: none; /* 不显示轮廓线 */
+	font-family: Microsoft YaHei; /* 设置字体 */
+	color: white; /* 字体颜色 */
+	font-size: 17px; /* 字体大小 */
+}
+.login-button:hover { /* 鼠标移入按钮范围时改变颜色 */
+	background: #5599FF;
+}
+    </style>
+
 </head>
 
-<body class="bg index">
+<body class="bg index" onLoad="document.getElementById('enter').focus()">
     <div id="container">
         <div id="wrapper" class="mh">
             <h1 style="text-align: center">别再问爷下顿吃什么了，爷下顿就吃这个！</h1>
             <div class="h20"></div>
+
+     
+
+
+
             <script type="text/javascript">
                 var game;
 
@@ -168,12 +199,12 @@
                 <div id="tabs" style="display: block;" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
                 <a href="#tabs-1" style="display: none">选餐</a>
 
-                    <div id="tabs-1" style="background: url(&quot;images/2.jpg&quot;) center center no-repeat;" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+                    <div id="tabs-1" style="background: url(&quot;images/thx2199.jpg&quot;) center center no-repeat;" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
                         <h1 id="event_title"><span>选餐</span></h1>
                         <div id="rotate_div" style="display: block;">
                             <div><span id="current_step" style="display: none;">原来你也是个干饭人</span></div>
                             <div id="rolling_board" style="display: none;"><span style="color: #f33">吉师美食</span></div>
-                            <div id="print_box" style="display: block;">请按回车开始</div>
+                            <div id="print_box" style="display: block;">请按回车键开始</div>
 	        </div>
                     </div>
                     <!-- /#tabs-1 -->
@@ -224,7 +255,7 @@
 
                         <label>背景图片</label>
                         <div>可以输入图片链接使用网络上的图片, 也可以把图片拷贝到当前目录, 把图片文件名填入即可.</div>
-                        <div><input name="background_image" type="text" value="images/2.jpg"></div>
+                        <div><input name="background_image" type="text" value="images/thx2199.jpg"></div>
 
 
                         <p><input type="button" value="保存" onclick="save_setting()"></p>
@@ -398,7 +429,7 @@
 
 	    function on_open() {
                         show_current_step('菜谱已经重新打乱');
-                        print_box('请再按一次回车吧');
+                        print_box('请再按一次回车键');
                     }
 
 
@@ -413,7 +444,7 @@
 
                     function on_step_open() {
                         show_current_step();
-                        print_box('按回车开始吧');
+                        print_box('按回车键开始');
                         $('#rolling_board').html('...');
                     }
 
@@ -448,7 +479,7 @@
                         rotate_run();
 
                         show_current_step();
-                        print_box('按回车停止');
+                        print_box('按回车键停止');
                     }
 
 
@@ -482,7 +513,7 @@
                             game.candidates = array_del_all(game.candidates, arr);
 
                             show_results();
-                            print_box('按回车继续');
+                            print_box('按回车键继续');
 
                             if (game.results[game.step].length == game.prizes[game.step].num) {
                                 game.step++;
@@ -583,11 +614,16 @@
                         game.init();
                     }
                 </script>
-
             </div>
 
         </div>
     </div>
+<br>
+           <script type="text/javascript"> 
+                function btnAction123() {
+                    game.process();
+                }
+           </script>
+<div style=" text-align:center;"><input type="button" class="login-button" onclick="btnAction123()" value="回车"/></div>
 </body>
-
 </html>
