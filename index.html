@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>阿俊今天吃什么</title>
+    <title>爷今天吃什么</title>
 
     <meta name="description" content="别再问爷下顿吃什么了！！">
     <meta name="keywords" content="">
@@ -177,6 +177,26 @@
 </head>
 
 <body class="bg index" onLoad="document.getElementById('enter').focus()">
+	<script>
+var OriginTitile = document.title;
+document.title = '欢迎一下崽崽٩(๑•̀ω•́๑)۶';
+titleTime = setTimeout(function() {
+    document.title = OriginTitile;         
+}, 4000);                  /*设置标题时间，单位毫秒*/
+var titleTime;                             /*定义一个变量*/
+document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+        document.title = '崽崽快回来呀╭(° A °`)╮';// - ' + OriginTitile;  /*可删除原标题*/   
+        clearTimeout(titleTime);
+    }
+    else {
+        document.title = '最喜欢崽崽了ξ( ✿＞◡❛)';// - ' + OriginTitile;/*自定义标题+原标题，可删除原标题*/
+        titleTime = setTimeout(function() {
+            document.title = OriginTitile;         
+        }, 4000);
+    }
+});
+</script>
     <div id="container">
         <div id="wrapper" class="mh">
             <h1 style="text-align: center">别再问爷下顿吃什么了，爷下顿就吃这个！</h1>
