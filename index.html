@@ -3,9 +3,8 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<link rel="icon" href="images/favicon.jpg" mce_href="/imfavicon.ico" type="image/x-icon">
-	<link rel="shortcut icon" href="images/favicon.jpg" mce_href="favicon.ico" type="image/x-icon">
-    <title>欢迎崽崽٩(๑•̀ω•́๑)۶</title>
+	 <link rel="icon" href="images/logo.ico" type="images/x-ico" />
+    <title>校园有名的爱吃鬼٩(๑•̀ω•́๑)۶</title>
 
     <meta name="description" content="当地有名的爱吃鬼">
     <meta name="keywords" content="">
@@ -179,6 +178,27 @@
 </head>
 
 <body class="bg index" onLoad="document.getElementById('enter').focus()">
+	<script>
+		//var OriginTitile = document.title;      /*定义一个变量保存原标题*/
+		var OriginTitile = document.title.slice(0,-6) + '\'s little world';      /*定义一个变量保存原标题*/
+		document.title = '欢迎一下崽崽٩(๑•̀ω•́๑)۶';
+		titleTime = setTimeout(function() {
+    		document.title = OriginTitile;         
+		}, 4000);                  /*设置标题时间，单位毫秒*/
+		var titleTime;                             /*定义一个变量*/
+		document.addEventListener('visibilitychange', function() {
+    		if (document.hidden) {
+        		document.title = '崽崽快回来呀╭(° A °`)╮';// - ' + OriginTitile;  /*可删除原标题*/   
+        		clearTimeout(titleTime);
+    		}
+    		else {
+        		document.title = '最喜欢崽崽了ξ( ✿＞◡❛)';// - ' + OriginTitile;/*自定义标题+原标题，可删除原标题*/
+        		titleTime = setTimeout(function() {
+            		document.title = OriginTitile;         
+        		}, 4000);                  /*设置标题时间，单位毫秒*/
+    		}
+		});
+	</script>
     <div id="container">
         <div id="wrapper" class="mh">
             <h1 style="text-align: center">干饭人冲冲冲</h1>
